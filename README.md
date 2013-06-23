@@ -5,7 +5,8 @@ This plugin for PhoneGap lets you easily check if an URL scheme is on iOS availa
 
 by [ohh2ahh](http://ohh2ahh.com)
 
-## JavaScript ##
+Example
+-------
 
 	window.checkurlscheme("onepassword://", function(availability) {
 		// availability is either true or false
@@ -14,3 +15,7 @@ by [ohh2ahh](http://ohh2ahh.com)
 	});
 
 Tested with Cordova 2.8.1, Xcode 4.6.3 and iOS 6.1.3
+
+License
+-------
+[MIT License](http://www.opensource.org/licenses/mit-license.html)
