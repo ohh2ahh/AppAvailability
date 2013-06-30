@@ -1,0 +1,3 @@
+<feature name="CheckURLScheme">
+	<param name="ios-package" value="CheckURLScheme" />
+</feature>
