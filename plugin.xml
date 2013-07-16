@@ -9,19 +9,15 @@
 	<description>Checks URL Scheme</description>
 	
 	<platform name="ios">
-		<!-- Class Mapping -->
+			
 		<config-file target="config.xml" parent="/*">
 			<feature name="CheckURLScheme">
 				<param name="ios-package" value="CheckURLScheme" />
 			</feature>
 		</config-file>
 		
-		<!-- JavaScript -->
-		<js-module src="www/CheckURLScheme.js" name="CheckURLScheme">
-			<clobbers target="checkurlscheme" />
-		</js-module>
+		<asset src="www/CheckURLScheme.js" target="js/CheckURLScheme.js" />
 		
-		<!-- Header & Source -->
 		<header-file src="src/ios/CheckURLScheme.h" />
 		<source-file src="src/ios/CheckURLScheme.m" />
 		
