@@ -8,12 +8,7 @@
 	
 	<description>Checks URL Scheme</description>
 	
-	<engines>
-		<engine name="cordova" version=">=2.3.0" />
-	</engines>
-	
 	<platform name="ios">
-		
 		<!-- Class Mapping -->
 		<config-file target="config.xml" parent="/*">
 			<feature name="CheckURLScheme">
