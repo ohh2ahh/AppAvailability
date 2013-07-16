@@ -14,7 +14,7 @@ Example
 		else { console.log("This URL Scheme is not available"); }
 	});
 
-Tested with Cordova 2.8.1, Xcode 4.6.3 and iOS 6.1.3
+Tested with Cordova 2.8.1 and 2.9.0, Xcode 4.6.3 and iOS 6.1.3
 
 License
 -------
