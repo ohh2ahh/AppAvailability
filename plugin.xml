@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="com.phonegap.plugins.checkurlscheme"
+	version="0.1.0">
+
+	<name>CheckURLScheme</name>
+	
+	<description>Checks URL Scheme</description>
+	
+	<engines>
+		<engine name="cordova" version=">=2.3.0" />
+	</engines>
+	
+	<platform name="ios">
+		
+		<!-- Class Mapping -->
+		<config-file target="config.xml" parent="/*">
+			<feature name="CheckURLScheme">
+				<param name="ios-package" value="CheckURLScheme" />
+			</feature>
+		</config-file>
+		
+		<!-- JavaScript -->
+		<js-module src="www/CheckURLScheme.js" name="CheckURLScheme">
+			<clobbers target="checkurlscheme" />
+		</js-module>
+		
+		<!-- Header & Source -->
+		<header-file src="src/ios/CheckURLScheme.h" />
+		<source-file src="src/ios/CheckURLScheme.m" />
+		
+	</platform>
+	
+</plugin>
