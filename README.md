@@ -1,20 +1,21 @@
-CheckURLScheme
-==============
+SchemeCheck for PhoneGap
+========================
+by [ohh2ahh](http://ohh2ahh.com)
+
+Description
+-----------
 
 This plugin for PhoneGap allows you to check if a specific URL Scheme (e.g. fb://) is available.
 
-by [ohh2ahh](http://ohh2ahh.com)
+Ready for PhoneGap 3.0
 
 Example
 -------
 
-	window.checkurlscheme("onepassword://", function(availability) {
+	window.schemecheck("fb://", function(availability) {
 		// availability is either true or false
-		if(availability) { console.log("This URL Scheme is available"); }
-		else { console.log("This URL Scheme is not available"); }
+		if(availability) { console.log("fb:// available"); }
 	});
-
-Tested with Cordova 2.8.1 and 2.9.0, Xcode 4.6.3 and iOS 6.1.3
 
 License
 -------
