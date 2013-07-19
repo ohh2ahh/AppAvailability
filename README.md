@@ -1,7 +1,7 @@
 CheckURLScheme
 ==============
 
-This plugin for PhoneGap lets you easily check if an URL scheme is on iOS available.
+This plugin for PhoneGap allows you to check if a specific URL Scheme (e.g. fb://) is available.
 
 by [ohh2ahh](http://ohh2ahh.com)
 
