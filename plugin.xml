@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	id="com.phonegap.plugins.checkurlscheme"
+	id="com.ohh2ahh.plugins.schemecheck"
 	version="0.1.0">
 
-	<name>CheckURLScheme</name>
+	<name>SchemeCheck</name>
 	
-	<description>Checks URL Scheme</description>
+		<description>
+			This plugin allows you to check if a specific URL Scheme (e.g. fb://) is available.
+		</description>
 	
+		<license>MIT</license>
+		
+	<engines>
+		<engine name="cordova" version=">=2.3.0" />
+	</engines>
+	
+	
+	<asset src="www/SchemeCheck.js" target="js/plugins/SchemeCheck.js" />
+	
+	<!-- android -->
+	<!-- coming soon (maybe) -->
+	
+	<!-- ios -->
 	<platform name="ios">
 			
 		<config-file target="config.xml" parent="/*">
-			<feature name="CheckURLScheme">
-				<param name="ios-package" value="CheckURLScheme" />
+			<feature name="SchemeCheck">
+				<param name="ios-package" value="SchemeCheck" />
 			</feature>
 		</config-file>
 		
-		<asset src="www/CheckURLScheme.js" target="js/CheckURLScheme.js" />
+		<header-file src="src/ios/SchemeCheck.h" />
 		
-		<header-file src="src/ios/CheckURLScheme.h" />
-		<source-file src="src/ios/CheckURLScheme.m" />
+		<source-file src="src/ios/SchemeCheck.m" />
 		
 	</platform>
 	
