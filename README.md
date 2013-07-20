@@ -6,11 +6,12 @@ Description
 -----------
 
 This plugin allows you to check if an app is installed.
-It's compatible with iOS and Android and it's ready for PhoneGap 3.0!
+
+It's compatible with iOS / Android and ready for PhoneGap 3.0!
 
 
-Usage: iOS
--------
+iOS
+---
 
 	window.appavailability('fb://', function(availability) {
 		// availability is either true or false
@@ -18,7 +19,7 @@ Usage: iOS
 	});
 
 
-Usage: Android
+Android
 -------
 
 	window.appavailability('com.facebook.katana', function(availability) {
