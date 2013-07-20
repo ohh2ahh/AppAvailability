@@ -1,9 +1,9 @@
-#import "SchemeCheck.h"
+#import "AppAvailability.h"
 #import <Cordova/CDV.h>
 
-@implementation SchemeCheck
+@implementation AppAvailability
 
-- (void)schemecheck:(CDVInvokedUrlCommand*)command
+- (void)appavailability:(CDVInvokedUrlCommand*)command
 {
 	CDVPluginResult* pluginResult = nil;
 	NSString* scheme = [command.arguments objectAtIndex:0];
