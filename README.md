@@ -1,21 +1,31 @@
-SchemeCheck for PhoneGap
-========================
+PhoneGap AppAvailability for iOS and Android
+============================================
 by [ohh2ahh](http://ohh2ahh.com)
 
 Description
 -----------
 
-This plugin for PhoneGap allows you to check if a specific URL Scheme (e.g. fb://) is available.
+This plugin allows you to check if an app is installed.
+It's compatible with iOS and Android and it's ready for PhoneGap 3.0!
 
-Ready for PhoneGap 3.0
 
-Example
+Usage: iOS
 -------
 
-	window.schemecheck("fb://", function(availability) {
+	window.appavailability('fb://', function(availability) {
 		// availability is either true or false
-		if(availability) { console.log("fb:// available"); }
+		if(availability) { console.log('Facebook is available'); }
 	});
+
+
+Usage: Android
+-------
+
+	window.appavailability('com.facebook.katana', function(availability) {
+		// availability is either true or false
+		if(availability) { console.log('Facebook is available'); }
+	});
+
 
 License
 -------
