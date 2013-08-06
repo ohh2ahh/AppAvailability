@@ -13,17 +13,21 @@ It's compatible with iOS / Android and ready for PhoneGap 3.0!
 
 ### 2.1. iOS
 
-	window.appavailability('fb://', function(availability) {
-		// availability is either true or false
-		if(availability) { console.log('Facebook is available'); }
-	});
+```javascript
+window.appavailability('fb://', function(availability) {
+	// availability is either true or false
+	if(availability) { console.log('Facebook is available'); }
+});
+```
 
 ### 2.2. Android
 
-	window.appavailability('com.facebook.katana', function(availability) {
-		// availability is either true or false
-		if(availability) { console.log('Facebook is available'); }
-	});
+```javascript
+window.appavailability('com.facebook.katana', function(availability) {
+	// availability is either true or false
+	if(availability) { console.log('Facebook is available'); }
+});
+```
 
 ## 3. Some Apps
 
