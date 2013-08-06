@@ -4,8 +4,11 @@ by [ohh2ahh](http://ohh2ahh.com)
 
 1. [Description](https://github.com/ohh2ahh/AppAvailability#1-description)
 2. [JavaScript](https://github.com/ohh2ahh/AppAvailability#2-javascript)
-3. [PhoneGap Build]()
-4. [Some package names / URI schemes]()
+	2. [iOS](https://github.com/ohh2ahh/AppAvailability#ios)
+	2. [Android](https://github.com/ohh2ahh/AppAvailability#android)
+3. [PhoneGap Build](https://github.com/ohh2ahh/AppAvailability#3-phonegap-build)
+4. [Some package names / URI schemes](https://github.com/ohh2ahh/AppAvailability#4-some-package-names--uri-schemes)
+5. [Licence](https://github.com/ohh2ahh/AppAvailability#1-licence)
 
 ## 1. Description
 
@@ -18,7 +21,7 @@ It requires a package name (e.g com.facebook.katana) on Android or an URI scheme
 
 ## 2. JavaScript
 
-### 2.1. iOS
+### iOS
 
 ```javascript
 window.appavailability('fb://', function(availability) {
@@ -27,7 +30,7 @@ window.appavailability('fb://', function(availability) {
 });
 ```
 
-### 2.2. Android
+### Android
 
 ```javascript
 window.appavailability('com.facebook.katana', function(availability) {
@@ -72,7 +75,7 @@ WhatsApp:
 * Android: `com.whatsapp`
 * iOS: `whatsapp://` (only since v. 2.10.1, [more information](http://www.whatsapp.com/faq/en/iphone/23559013))
 
-## License
+## 5. License
 
 [The MIT License (MIT)](http://www.opensource.org/licenses/mit-license.html)
 
