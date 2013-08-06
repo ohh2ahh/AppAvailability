@@ -2,29 +2,25 @@
 
 by [ohh2ahh](http://ohh2ahh.com)
 
-1. [Description](#description)
-2. [JavaScript](#javascript)
-	1. [iOS](#ios)
-	2. [Android](#android)
-3. [Some Apps](#some-apps)
+3. [Some Apps](##some-apps)
 
-## 1. Description<a id="description"></a>
+## 1. Description
 
 This plugin allows you to check if an app is installed.
 It requires a Package Name (e.g com.facebook.katana) on Android or an URI Scheme (e.g. fb://) on iOS.
 
 It's compatible with iOS / Android and ready for PhoneGap 3.0!
 
-## 2. JavaScript<a id="javascript"></a>
+## 2. JavaScript
 
-### 2.1. iOS<a id="ios"></a>
+### 2.1. iOS
 
 	window.appavailability('fb://', function(availability) {
 		// availability is either true or false
 		if(availability) { console.log('Facebook is available'); }
 	});
 
-### 2.2. Android<a id="android"></a>
+### 2.2. Android
 
 	window.appavailability('com.facebook.katana', function(availability) {
 		// availability is either true or false
