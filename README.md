@@ -63,6 +63,8 @@ or to use this exact version:
 
 ## 4. Some package names / URI schemes
 
+[How do I get the package name / URI scheme?](https://github.com/ohh2ahh/AppAvailability/issues/2#issuecomment-22203591)
+
 Facebook:
 * Android: `com.facebook.katana`
 * iOS: `fb://` (and [many more](http://wiki.akosma.com/IPhone_URL_Schemes#Facebook) as `fb://profile`)
