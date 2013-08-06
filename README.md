@@ -2,8 +2,6 @@
 
 by [ohh2ahh](http://ohh2ahh.com)
 
-3. [Some Apps](##some-apps)
-
 ## 1. Description
 
 This plugin allows you to check if an app is installed.
@@ -27,7 +25,7 @@ It's compatible with iOS / Android and ready for PhoneGap 3.0!
 		if(availability) { console.log('Facebook is available'); }
 	});
 
-## 3. Some Apps<a id="some-apps"></a>
+## 3. Some Apps
 
 Facebook:
 * Android: `com.facebook.katana`
