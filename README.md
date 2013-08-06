@@ -2,12 +2,19 @@
 
 by [ohh2ahh](http://ohh2ahh.com)
 
+1. [Description](https://github.com/ohh2ahh/AppAvailability#1-description)
+2. [JavaScript](https://github.com/ohh2ahh/AppAvailability#2-javascript)
+3. [PhoneGap Build]()
+4. [Some package names / URI schemes]()
+
 ## 1. Description
 
 This plugin allows you to check if an app is installed.
-It requires a Package Name (e.g com.facebook.katana) on Android or an URI Scheme (e.g. fb://) on iOS.
+It requires a package name (e.g com.facebook.katana) on Android or an URI scheme (e.g. fb://) on iOS.
 
-It's compatible with iOS / Android and ready for PhoneGap 3.0!
+* iOS and Android
+* Works with PhoneGap Build ([more information](https://build.phonegap.com/plugins/17))
+* Compatible with [Plugman](https://github.com/apache/cordova-plugman) and ready for PhoneGap 3.0
 
 ## 2. JavaScript
 
@@ -29,7 +36,29 @@ window.appavailability('com.facebook.katana', function(availability) {
 });
 ```
 
-## 3. Some Apps
+## 3. PhoneGap Build
+
+AppAvailability works with PhoneGap build too. You can implement the plugin with these simple steps.
+
+1\. Add the following xml to your `config.xml` to always use the latest version of this plugin:
+```xml
+<gap:plugin name="com.ohh2ahh.plugins.appavailability" />
+```
+or to use this exact version:
+```xml
+<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.1.0" />
+```
+
+2\. Reference the JavaScript code in your `index.html`:
+```html
+<!-- below <script src="phonegap.js"></script> -->
+<script src="js/plugins/AppAvailability.js"></script>
+```
+
+3\. Use the plugin as described above.
+
+
+## 4. Some package names / URI schemes
 
 Facebook:
 * Android: `com.facebook.katana`
