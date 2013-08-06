@@ -1,5 +1,5 @@
-PhoneGap AppAvailability for iOS and Android
-============================================
+# PhoneGap AppAvailability for iOS and Android
+
 by [ohh2ahh](http://ohh2ahh.com)
 
 Description
