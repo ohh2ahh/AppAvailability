@@ -8,7 +8,7 @@ by [ohh2ahh](http://ohh2ahh.com)
 	2. [Android](https://github.com/ohh2ahh/AppAvailability#android)
 3. [PhoneGap Build](https://github.com/ohh2ahh/AppAvailability#3-phonegap-build)
 4. [Some package names / URI schemes](https://github.com/ohh2ahh/AppAvailability#4-some-package-names--uri-schemes)
-5. [Licence](https://github.com/ohh2ahh/AppAvailability#1-licence)
+5. [License](https://github.com/ohh2ahh/AppAvailability#5-License)
 
 ## 1. Description
 
