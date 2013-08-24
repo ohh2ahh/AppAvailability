@@ -3,10 +3,13 @@
 by [ohh2ahh](http://ohh2ahh.com)
 
 1. [Description](https://github.com/ohh2ahh/AppAvailability#1-description)
-2. [JavaScript](https://github.com/ohh2ahh/AppAvailability#2-javascript)
-	2. [iOS](https://github.com/ohh2ahh/AppAvailability#ios)
-	2. [Android](https://github.com/ohh2ahh/AppAvailability#android)
-3. [PhoneGap Build](https://github.com/ohh2ahh/AppAvailability#3-phonegap-build)
+2. [Installation](https://github.com/ohh2ahh/AppAvailability#2-installation)
+	2. [Automatically (CLI / Plugman)](https://github.com/ohh2ahh/AppAvailability#automatically-cli--plugman)
+	2. [Manually](https://github.com/ohh2ahh/AppAvailability#manually)
+	2. [PhoneGap Build](https://github.com/ohh2ahh/AppAvailability#phonegap-build)
+3. [Usage](https://github.com/ohh2ahh/AppAvailability#3-usage)
+	3. [iOS](https://github.com/ohh2ahh/AppAvailability#ios)
+	3. [Android](https://github.com/ohh2ahh/AppAvailability#android)
 4. [Some package names / URI schemes](https://github.com/ohh2ahh/AppAvailability#4-some-package-names--uri-schemes)
 5. [License](https://github.com/ohh2ahh/AppAvailability#5-license)
 
@@ -16,30 +19,48 @@ This plugin allows you to check if an app is installed.
 It requires a package name (e.g com.facebook.katana) on Android or an URI scheme (e.g. fb://) on iOS.
 
 * iOS and Android
+* Compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman) and ready for PhoneGap 3.0
 * Works with PhoneGap Build ([more information](https://build.phonegap.com/plugins/17))
-* Compatible with [Plugman](https://github.com/apache/cordova-plugman) and ready for PhoneGap 3.0
 
-## 2. JavaScript
+## 2. Installation
 
-### iOS
+### Automatically (CLI / Plugman)
+AppAvailability is compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman) and ready for the [PhoneGap 3.0 CLI](http://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface_add_features), here's how it works with the CLI:
 
-```javascript
-window.appavailability('fb://', function(availability) {
-	// availability is either true or false
-	if(availability) { console.log('Facebook is available'); }
-});
+```
+$ phonegap local plugin add https://github.com/ohh2ahh/AppAvailability.git
 ```
 
-### Android
+### Manually
 
-```javascript
-window.appavailability('com.facebook.katana', function(availability) {
-	// availability is either true or false
-	if(availability) { console.log('Facebook is available'); }
-});
+1\. Add the following xml to your `config.xml` in the root directory of your `www` folder:
+```xml
+<!-- for iOS -->
+<feature name="AppAvailability">
+	<param name="ios-package" value="AppAvailability" />
+</feature>
+```
+```xml
+<!-- for Android -->
+<feature name="AppAvailability">
+	<param name="android-package" value="com.ohh2ahh.appavailability.AppAvailability" />
+</feature>
 ```
 
-## 3. PhoneGap Build
+2\. Grab a copy of AppAvailability.js, add it to your project and reference it in `index.html`:
+```html
+<!-- for iOS -->
+<script type="text/javascript" src="js/appavailability.js"></script>
+```
+
+3\. Download the source files for iOS and/or Android and copy them to your project.
+
+iOS: Copy `AppAvailability.h` and `AppAvailability.h` to `platforms/ios/<ProjectName>/Plugins`
+
+
+Android: Copy `AppAvailability.java` to `platforms/android/src/com/ohh2ahh/appavailability` (create the folders if they don't already exist)
+
+### PhoneGap Build
 
 AppAvailability works with PhoneGap build too. You can implement the plugin with these simple steps.
 
@@ -58,8 +79,26 @@ or to use this exact version:
 <script src="js/plugins/AppAvailability.js"></script>
 ```
 
-3\. Use the plugin as described above.
 
+## 3. Usage
+
+### iOS
+
+```javascript
+window.appavailability('fb://', function(availability) {
+	// availability is either true or false
+	if(availability) { console.log('Facebook is available'); }
+});
+```
+
+### Android
+
+```javascript
+window.appavailability('com.facebook.katana', function(availability) {
+	// availability is either true or false
+	if(availability) { console.log('Facebook is available'); }
+});
+```
 
 ## 4. Some package names / URI schemes
 
