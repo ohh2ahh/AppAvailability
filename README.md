@@ -49,7 +49,6 @@ $ phonegap local plugin add https://github.com/ohh2ahh/AppAvailability.git
 
 2\. Grab a copy of AppAvailability.js, add it to your project and reference it in `index.html`:
 ```html
-<!-- for iOS -->
 <script type="text/javascript" src="js/appavailability.js"></script>
 ```
 
