@@ -16,9 +16,7 @@
 		<engine name="cordova" version=">=2.3.0" />
 	</engines>
 	
-	<js-module src="www/AppAvailability.js" name="AppAvailability">
-        <clobbers target="window.appavailability" />
-    </js-module>
+	<asset src="www/AppAvailability.js" target="js/plugins/AppAvailability.js" />
 	
 	<!-- android -->
 	<platform name="android">
