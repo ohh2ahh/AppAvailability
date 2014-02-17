@@ -51,7 +51,7 @@ AppAvailability works with PhoneGap build too. You can implement the plugin with
 ```
 or to use this exact version:
 ```xml
-<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.1.0" />
+<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.2.0" />
 ```
 
 2\. Reference the JavaScript code in your `index.html`:
