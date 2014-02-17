@@ -43,22 +43,16 @@ $ cordova prepare
 
 ### PhoneGap Build
 
-AppAvailability works with PhoneGap build too. You can implement the plugin with these simple steps.
-
-1\. Add the following xml to your `config.xml` to always use the latest version of this plugin:
+AppAvailability works with PhoneGap build too. You can implement the plugin by adding the following xml to your `config.xml`:
 ```xml
 <gap:plugin name="com.ohh2ahh.plugins.appavailability" />
 ```
-or to use this exact version:
+Or if you want to use an exact version of the plugin:
 ```xml
 <gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.2.0" />
 ```
 
-2\. Reference the JavaScript code in your `index.html`:
-```html
-<!-- below <script src="phonegap.js"></script> -->
-<script src="js/plugins/AppAvailability.js"></script>
-```
+You don't have to reference the JavaScript anymore.
 
 ## 3. Usage
 
