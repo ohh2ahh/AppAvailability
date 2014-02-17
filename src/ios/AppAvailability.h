@@ -2,6 +2,6 @@
 
 @interface AppAvailability : CDVPlugin
 
-- (void)appavailability:(CDVInvokedUrlCommand*)command;
+- (void)checkAvailability:(CDVInvokedUrlCommand*)command;
 
 @end

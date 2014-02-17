@@ -1,9 +1,17 @@
-window.appavailability = function(str, callback) {
-	cordova.exec(
-		function(){callback(true);},
-		function(err){callback(false);},
-		"AppAvailability",
-		"appavailability",
-		[str]
-	);
-};
+var exec = require('cordova/exec');
+function AppAvailability() {}
+AppAvailability.prototype.check = function(str, callback) {
+    exec(
+        function(result) {
+            callback(result);
+        },
+        function(error) {
+            callback(error);
+        },
+        "AppAvailability",
+        "checkAvailability",
+        [str]
+    );
+}
+
+module.exports = new AppAvailability();
