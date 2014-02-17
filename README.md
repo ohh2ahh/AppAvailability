@@ -1,6 +1,6 @@
-# Cordova Plugin: AppAvailability for iOS and Android
+# AppAvailability for iOS and Android
 
-by [ohh2ahh](http://ohh2ahh.com)
+A Plugin for Cordova / PhoneGap by [ohh2ahh](http://ohh2ahh.com)
 
 1. [Description](https://github.com/ohh2ahh/AppAvailability#1-description)
 2. [Installation](https://github.com/ohh2ahh/AppAvailability#2-installation)
@@ -15,9 +15,9 @@ by [ohh2ahh](http://ohh2ahh.com)
 ## 1. Description
 
 This plugin allows you to check if an app is installed on the user's device.
-It requires an URI scheme (e.g. fb://) on iOS or a package name (e.g com.facebook.katana) on Android.
+It requires an URI scheme (e.g. twitter://) on iOS or a package name (e.g com.twitter.android) on Android.
 
-* Ready for the Command-line Interface of Cordova / PhoneGap 3.0
+* Ready for the Command-line Interface of Cordova / PhoneGap 3.0 and later
 * Works with PhoneGap Build ([more information](https://build.phonegap.com/plugins/17))
 
 ### Supported Platforms
@@ -27,50 +27,49 @@ It requires an URI scheme (e.g. fb://) on iOS or a package name (e.g com.faceboo
 
 ## 2. Installation
 
-Cordova 3.0 and later CLI is the recommended way to use AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface).
+The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface).
 
 ### Automatically (Command-line Interface)
-Simply run this command to add AppAvailability to your project.
-
+Simply run this command to add AppAvailability to your project:
 ```
 $ cordova plugin add https://github.com/ohh2ahh/AppAvailability.git
 ```
 
-And run the following code to prepare your project.
+And if you're using PhoneGap instead of Cordova:
 ```
-$ cordova prepare
+$ phonegap local plugin add https://github.com/ohh2ahh/AppAvailability.git
 ```
 
 ### PhoneGap Build
 
-AppAvailability works with PhoneGap build too. You can implement the plugin by adding the following xml to your `config.xml`:
+AppAvailability works with PhoneGap build too. You can implement the latest version of the plugin by adding the following xml to your `config.xml`:
 ```xml
 <gap:plugin name="com.ohh2ahh.plugins.appavailability" />
 ```
-Or if you want to use an exact version of the plugin:
+Or if you want to use an exact version of AppAvailability:
 ```xml
 <gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.2.0" />
 ```
 
-You don't have to reference the JavaScript anymore.
+There is no need to reference the JavaScript in your `index.html`.
 
 ## 3. Usage
 
 ### iOS
 
 ```javascript
-appAvailability.check('fb://', function(availability) {
+appAvailability.check('twitter://', function(availability) {
     // availability is either true or false
-    if(availability) { console.log('Facebook is available'); }
+    if(availability) { console.log('Twitter is available'); }
 });
 ```
 
 ### Android
 
 ```javascript
-appAvailability.check('com.facebook.katana', function(availability) {
+appAvailability.check('com.twitter.android', function(availability) {
     // availability is either true or false
-    if(availability) { console.log('Facebook is available'); }
+    if(availability) { console.log('Twitter is available'); }
 });
 ```
 
@@ -78,13 +77,13 @@ appAvailability.check('com.facebook.katana', function(availability) {
 
 [How do I get the URI scheme / package name?](https://github.com/ohh2ahh/AppAvailability/issues/2#issuecomment-22203591)
 
-Facebook:
-* iOS: `fb://` (and [many more](http://wiki.akosma.com/IPhone_URL_Schemes#Facebook) as `fb://profile`)
-* Android: `com.facebook.katana`
-
 Twitter:
 * iOS: `twitter://` ([more schemes](http://wiki.akosma.com/IPhone_URL_Schemes#Twitter))
 * Android: `com.twitter.android`
+
+Facebook:
+* iOS: `fb://` (and [many more](http://wiki.akosma.com/IPhone_URL_Schemes#Facebook) as `fb://profile`)
+* Android: `com.facebook.katana`
 
 WhatsApp:
 * iOS: `whatsapp://` (only since v. 2.10.1, [more information](http://www.whatsapp.com/faq/en/iphone/23559013))
