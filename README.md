@@ -80,7 +80,7 @@ appAvailability.check('com.facebook.katana', function(availability) {
 });
 ```
 
-## 4. Some package names / URI schemes
+## 4. Some URI schemes / package names
 
 [How do I get the URI scheme / package name?](https://github.com/ohh2ahh/AppAvailability/issues/2#issuecomment-22203591)
 
