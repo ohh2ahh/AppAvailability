@@ -55,6 +55,8 @@ There is no need to reference the JavaScript in your `index.html`.
 
 ## 3. Usage
 
+:exclamation: The usage changed in version 0.2.0! You can find the [old docs here](https://github.com/ohh2ahh/AppAvailability/blob/v0.1.1/README.md).
+
 ### iOS
 
 ```javascript
