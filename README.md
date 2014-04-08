@@ -48,14 +48,14 @@ AppAvailability works with PhoneGap build too. You can implement the latest vers
 ```
 Or if you want to use an exact version of AppAvailability:
 ```xml
-<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.2.0" />
+<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.2.1" />
 ```
 
 There is no need to reference the JavaScript in your `index.html`.
 
 ## 3. Usage
 
-:exclamation: The usage changed in version 0.2.0! You can find the [old docs here](https://github.com/ohh2ahh/AppAvailability/blob/v0.1.1/README.md).
+:exclamation: The code changed in version 0.2.0! You can find the [old docs here](https://github.com/ohh2ahh/AppAvailability/blob/v0.1.1/README.md).
 
 ### iOS
 
