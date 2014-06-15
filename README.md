@@ -11,7 +11,7 @@ A Plugin for Cordova / PhoneGap by [ohh2ahh](http://ohh2ahh.com)
 3. [Usage](https://github.com/ohh2ahh/AppAvailability#3-usage)
 	3. [iOS](https://github.com/ohh2ahh/AppAvailability#ios)
 	3. [Android](https://github.com/ohh2ahh/AppAvailability#android)
-	3. [Old approach](https://github.com/ohh2ahh/AppAvailability#old-approach)
+	3. [Old approach](https://github.com/ohh2ahh/AppAvailability#old-approach--030)
 4. [Some URI Schemes / Package Names](https://github.com/ohh2ahh/AppAvailability#4-some-uri-schemes--package-names)
 5. [License](https://github.com/ohh2ahh/AppAvailability#5-license)
 
@@ -61,7 +61,7 @@ There is no need to reference the JavaScript in your `index.html`.
 
 ## 3. Usage
 
-:exclamation: The code changed in version 0.3.0 and supports now success and error callbacks! But you can still use the old approach, which is [described below](https://github.com/ohh2ahh/AppAvailability#old-approach).
+:exclamation: The code changed in version 0.3.0 and supports now success and error callbacks! But you can still use the old approach, which is [described below](https://github.com/ohh2ahh/AppAvailability#old-approach--030).
 
 ### iOS
 
