@@ -1,5 +1,7 @@
 # AppAvailability for iOS and Android
 
+`Version 0.3.0`
+
 A Plugin for Cordova / PhoneGap by [ohh2ahh](http://ohh2ahh.com)
 
 1. [Description](https://github.com/ohh2ahh/AppAvailability#1-description)
@@ -9,13 +11,14 @@ A Plugin for Cordova / PhoneGap by [ohh2ahh](http://ohh2ahh.com)
 3. [Usage](https://github.com/ohh2ahh/AppAvailability#3-usage)
 	3. [iOS](https://github.com/ohh2ahh/AppAvailability#ios)
 	3. [Android](https://github.com/ohh2ahh/AppAvailability#android)
-4. [Some URI schemes / package names](https://github.com/ohh2ahh/AppAvailability#4-some-uri-schemes--package-names)
+	3. [Old approach](https://github.com/ohh2ahh/AppAvailability#old-approach)
+4. [Some URI Schemes / Package Names](https://github.com/ohh2ahh/AppAvailability#4-some-uri-schemes--package-names)
 5. [License](https://github.com/ohh2ahh/AppAvailability#5-license)
 
 ## 1. Description
 
 This plugin allows you to check if an app is installed on the user's device.
-It requires an URI scheme (e.g. twitter://) on iOS or a package name (e.g com.twitter.android) on Android.
+It requires an URI Scheme (e.g. twitter://) on iOS or a Package Name (e.g com.twitter.android) on Android.
 
 * Ready for the Command-line Interface of Cordova / PhoneGap 3.0 and later
 * Works with PhoneGap Build ([more information](https://build.phonegap.com/plugins/17))
@@ -27,18 +30,21 @@ It requires an URI scheme (e.g. twitter://) on iOS or a package name (e.g com.tw
 
 ## 2. Installation
 
-The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface).
+The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/3.5.0/guide_cli_index.md.html#The%20Command-Line%20Interface).
 
 ### Automatically (Command-line Interface)
+
 Simply run this command to add AppAvailability to your project:
 ```
 $ cordova plugin add https://github.com/ohh2ahh/AppAvailability.git
 ```
 
-And if you're using PhoneGap instead of Cordova:
+Don't forget to prepare and compile your project:
 ```
-$ phonegap local plugin add https://github.com/ohh2ahh/AppAvailability.git
+$ cordova build
 ```
+
+You don't have to reference the JavaScript in your `index.html`.
 
 ### PhoneGap Build
 
@@ -48,39 +54,60 @@ AppAvailability works with PhoneGap build too. You can implement the latest vers
 ```
 Or if you want to use an exact version of AppAvailability:
 ```xml
-<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.2.1" />
+<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.0" />
 ```
 
 There is no need to reference the JavaScript in your `index.html`.
 
 ## 3. Usage
 
-:exclamation: The code changed in version 0.2.0! You can find the [old docs here](https://github.com/ohh2ahh/AppAvailability/blob/v0.1.1/README.md).
+:exclamation: The code changed in version 0.3.0 and supports now success and error callbacks! But you can still use the old approach, which is [described below](https://github.com/ohh2ahh/AppAvailability#old-approach).
 
 ### iOS
 
 ```javascript
-appAvailability.check('twitter://', function(availability) {
-    // availability is either true or false
-    if(availability) { console.log('Twitter is available'); }
-});
+appAvailability.check(
+    'twitter://', // URI Scheme
+    function() {  // Success callback
+        console.log('Twitter is available');
+    },
+    function() {  // Error callback
+        console.log('Twitter is not available');
+    }
+);
 ```
 
 ### Android
 
 ```javascript
-appAvailability.check('com.twitter.android', function(availability) {
+appAvailability.check(
+    'com.twitter.android', // URI Scheme
+    function() {           // Success callback
+        console.log('Twitter is available');
+    },
+    function() {           // Error callback
+        console.log('Twitter is not available');
+    }
+);
+```
+
+### Old approach (< 0.3.0)
+
+The only thing you have to do is replacing `appAvailability.check` with `appAvailability.checkBool`:
+
+```javascript
+appAvailability.checkBool('twitter://', function(availability) {
     // availability is either true or false
     if(availability) { console.log('Twitter is available'); }
 });
 ```
 
-## 4. Some URI schemes / package names
+## 4. Some URI Schemes / Package Names
 
-[How do I get the URI scheme / package name?](https://github.com/ohh2ahh/AppAvailability/issues/2#issuecomment-22203591)
+[How do I get the URI Scheme / Package Name?](https://github.com/ohh2ahh/AppAvailability/issues/2#issuecomment-22203591)
 
 Twitter:
-* iOS: `twitter://` ([more schemes](http://wiki.akosma.com/IPhone_URL_Schemes#Twitter))
+* iOS: `twitter://` ([more Schemes](http://wiki.akosma.com/IPhone_URL_Schemes#Twitter))
 * Android: `com.twitter.android`
 
 Facebook:

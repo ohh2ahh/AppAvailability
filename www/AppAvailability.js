@@ -1,17 +1,27 @@
 var exec = require('cordova/exec');
-function AppAvailability() {}
-AppAvailability.prototype.check = function(str, callback) {
-    exec(
-        function(result) {
-            callback(result);
-        },
-        function(error) {
-            callback(error);
-        },
-        "AppAvailability",
-        "checkAvailability",
-        [str]
-    );
-}
 
-module.exports = new AppAvailability();
+var appAvailability = {
+    
+    check: function(urlScheme, successCallback, errorCallback) {
+        exec(
+            successCallback,
+            errorCallback,
+            "AppAvailability",
+            "checkAvailability",
+            [urlScheme]
+        );
+    },
+    
+    checkBool: function(urlScheme, callback) {
+        exec(
+            function(success) { callback(success); },
+            function(error) { callback(error); },
+            "AppAvailability",
+            "checkAvailability",
+            [urlScheme]
+        );
+    }
+    
+};
+
+module.exports = appAvailability;
