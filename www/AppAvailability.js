@@ -1,9 +1,7 @@
-var exec = require('cordova/exec');
-
 var appAvailability = {
     
     check: function(urlScheme, successCallback, errorCallback) {
-        exec(
+        cordova.exec(
             successCallback,
             errorCallback,
             "AppAvailability",
@@ -13,7 +11,7 @@ var appAvailability = {
     },
     
     checkBool: function(urlScheme, callback) {
-        exec(
+        cordova.exec(
             function(success) { callback(success); },
             function(error) { callback(error); },
             "AppAvailability",
