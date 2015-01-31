@@ -59,6 +59,8 @@ Or if you want to use an exact version of AppAvailability:
 
 There is no need to reference the JavaScript in your `index.html`.
 
+You can find a PhoneGap Build project which demonstrates AppAvailability in the repository [ohh2ahh/AppAvailability-Demo-PhoneGap-Build](https://github.com/ohh2ahh/AppAvailability-Demo-PhoneGap-Build).
+
 ## 3. Usage
 
 :exclamation: The code changed in version 0.3.0 and supports now success and error callbacks! But you can still use the old approach, which is [described below](https://github.com/ohh2ahh/AppAvailability#old-approach--030).
