@@ -12,7 +12,7 @@ A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com).
 	3. [iOS](https://github.com/ohh2ahh/AppAvailability#ios)
 	3. [Android](https://github.com/ohh2ahh/AppAvailability#android)
 	3. [Full Example](https://github.com/ohh2ahh/AppAvailability#full-example)
-	3. [Old Approach (AppAvailability < 0.3.0)](https://github.com/ohh2ahh/AppAvailability#old-approach-appavailability-030)
+	3. [Old Approach (AppAvailability < 0.3.0)](https://github.com/ohh2ahh/AppAvailability#old-approach-appavailability--030)
 4. [Some URI Schemes / Package Names](https://github.com/ohh2ahh/AppAvailability#4-some-uri-schemes--package-names)
 5. [License](https://github.com/ohh2ahh/AppAvailability#5-license)
 
@@ -71,7 +71,7 @@ You can find a PhoneGap Build project which demonstrates AppAvailability in the 
 
 ## 3. Usage
 
-:exclamation: The code changed in version 0.3.0 and supports now success and error callbacks! But you can still use the old approach, which is [described below](https://github.com/ohh2ahh/AppAvailability#old-approach-appavailability-030).
+:exclamation: The code changed in version 0.3.0 and supports now success and error callbacks! But you can still use the old approach, which is [described below](https://github.com/ohh2ahh/AppAvailability#old-approach-appavailability--030).
 
 ### iOS
 
