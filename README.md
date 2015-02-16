@@ -2,7 +2,7 @@
 
 `Version 0.3.1`
 
-A Plugin for Cordova / PhoneGap by [ohh2ahh](http://ohh2ahh.com)
+A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com).
 
 1. [Description](https://github.com/ohh2ahh/AppAvailability#1-description)
 2. [Installation](https://github.com/ohh2ahh/AppAvailability#2-installation)
@@ -11,7 +11,8 @@ A Plugin for Cordova / PhoneGap by [ohh2ahh](http://ohh2ahh.com)
 3. [Usage](https://github.com/ohh2ahh/AppAvailability#3-usage)
 	3. [iOS](https://github.com/ohh2ahh/AppAvailability#ios)
 	3. [Android](https://github.com/ohh2ahh/AppAvailability#android)
-	3. [Old approach](https://github.com/ohh2ahh/AppAvailability#old-approach--030)
+	3. [Full Example](https://github.com/ohh2ahh/AppAvailability#full-example)
+	3. [Old Approach (AppAvailability < 0.3.0)](https://github.com/ohh2ahh/AppAvailability#old-approach-appavailability-030)
 4. [Some URI Schemes / Package Names](https://github.com/ohh2ahh/AppAvailability#4-some-uri-schemes--package-names)
 5. [License](https://github.com/ohh2ahh/AppAvailability#5-license)
 
@@ -30,11 +31,13 @@ It requires an URI Scheme (e.g. twitter://) on iOS or a Package Name (e.g com.tw
 
 ## 2. Installation
 
-The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/3.5.0/guide_cli_index.md.html#The%20Command-Line%20Interface).
+The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface). In addition to the source code on GitHub you can find the plugin on these registries:
+* [Cordova Plugin Registry](http://plugins.cordova.io/#/package/com.ohh2ahh.plugins.appavailability)
+* [PhoneGap Plugin Registry](https://build.phonegap.com/plugins/1054)
 
 ### Automatically (Command-line Interface)
 
-Simply run this command to add AppAvailability to your project:
+Simply run this command to add the latest version of AppAvailability to your project:
 ```
 $ cordova plugin add https://github.com/ohh2ahh/AppAvailability.git
 ```
@@ -45,6 +48,11 @@ $ cordova build
 ```
 
 You don't have to reference the JavaScript in your `index.html`.
+
+Alternatively you can install AppAvailability from the [Cordova Plugin Registry](http://plugins.cordova.io/#/package/com.ohh2ahh.plugins.appavailability) with this command:
+```
+cordova plugin add com.ohh2ahh.plugins.appavailability
+```
 
 ### PhoneGap Build
 
@@ -63,7 +71,7 @@ You can find a PhoneGap Build project which demonstrates AppAvailability in the 
 
 ## 3. Usage
 
-:exclamation: The code changed in version 0.3.0 and supports now success and error callbacks! But you can still use the old approach, which is [described below](https://github.com/ohh2ahh/AppAvailability#old-approach--030).
+:exclamation: The code changed in version 0.3.0 and supports now success and error callbacks! But you can still use the old approach, which is [described below](https://github.com/ohh2ahh/AppAvailability#old-approach-appavailability-030).
 
 ### iOS
 
@@ -83,7 +91,7 @@ appAvailability.check(
 
 ```javascript
 appAvailability.check(
-    'com.twitter.android', // URI Scheme
+    'com.twitter.android', // Package Name
     function() {           // Success callback
         console.log('Twitter is available');
     },
@@ -93,7 +101,31 @@ appAvailability.check(
 );
 ```
 
-### Old approach (< 0.3.0)
+### Full Example
+
+```javascript
+var scheme;
+
+// Don't forget to add the org.apache.cordova.device plugin!
+if(device.platform === 'iOS') {
+    scheme = 'twitter://';
+}
+else if(device.platform === 'Android') {
+    scheme = 'com.twitter.android';
+}
+
+appAvailability.check(
+    scheme,       // URI Scheme or Package Name
+    function() {  // Success callback
+        console.log(scheme + ' is available :)');
+    },
+    function() {  // Error callback
+        console.log(scheme + ' is not available :(');
+    }
+);
+```
+
+### Old Approach (AppAvailability < 0.3.0)
 
 The only thing you have to do is replacing `appAvailability.check` with `appAvailability.checkBool`:
 
