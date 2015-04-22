@@ -1,6 +1,6 @@
 # AppAvailability for iOS and Android
 
-`Version 0.3.2`
+`Version 0.3.3`
 
 A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com).
 
@@ -62,7 +62,7 @@ AppAvailability works with PhoneGap build too. You can implement the latest vers
 ```
 Or if you want to use an exact version of AppAvailability:
 ```xml
-<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.2" />
+<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.3" />
 ```
 
 There is no need to reference the JavaScript in your `index.html`.

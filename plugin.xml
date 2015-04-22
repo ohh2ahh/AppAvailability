@@ -3,13 +3,16 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.ohh2ahh.plugins.appavailability"
-        version="0.3.2">
+        version="0.3.3">
     
     <name>AppAvailability</name>
     
     <description>This plugin for Cordova and PhoneGap allows you to check if an app is installed. It requires an URI Scheme (iOS) or a Package Name (Android).</description>
     
     <keywords>Cordova,PhoneGap,plugin,app,availability,installed, URIScheme,URI,Scheme,PackageName,Package,Name,iOS,Android</keywords>
+    
+    <repo>https://github.com/ohh2ahh/AppAvailability.git</repo>
+    <issue>https://github.com/ohh2ahh/AppAvailability/issues</issue>
     
     <license>MIT</license>
     
