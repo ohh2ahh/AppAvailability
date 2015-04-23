@@ -32,8 +32,9 @@ It requires an URI Scheme (e.g. twitter://) on iOS or a Package Name (e.g com.tw
 ## 2. Installation
 
 The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface). In addition to the source code on GitHub you can find the plugin on these registries:
-* [Cordova Plugin Registry](http://plugins.cordova.io/#/package/com.ohh2ahh.plugins.appavailability)
+* [npm](https://www.npmjs.com/package/cordova-plugin-appavailability)
 * [PhoneGap Plugin Registry](https://build.phonegap.com/plugins/1054)
+* [Cordova Plugin Registry](http://plugins.cordova.io/#/package/com.ohh2ahh.plugins.appavailability) (deprecated)
 
 ### Automatically (Command-line Interface)
 
@@ -51,7 +52,7 @@ You don't have to reference the JavaScript in your `index.html`.
 
 Alternatively you can install AppAvailability directly from [npm](https://www.npmjs.com/package/cordova-plugin-appavailability) with this command:
 ```
-cordova plugin add cordova-plugin-appavailability
+$ cordova plugin add cordova-plugin-appavailability
 ```
 
 ### PhoneGap Build
