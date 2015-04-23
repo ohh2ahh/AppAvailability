@@ -1,6 +1,6 @@
 # AppAvailability for iOS and Android
 
-`Version 0.4.0`
+`Version 0.4.1`
 
 A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com).
 
@@ -31,16 +31,17 @@ It requires an URI Scheme (e.g. twitter://) on iOS or a Package Name (e.g com.tw
 
 ## 2. Installation
 
-The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface). In addition to the source code on GitHub you can find the plugin on these registries:
+The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface). You can find the plugin on these registries:
+* [GitHub](https://github.com/ohh2ahh/AppAvailability)
 * [npm](https://www.npmjs.com/package/cordova-plugin-appavailability)
-* [PhoneGap Plugin Registry](https://build.phonegap.com/plugins/1054)
-* [Cordova Plugin Registry](http://plugins.cordova.io/#/package/com.ohh2ahh.plugins.appavailability) (deprecated)
+* [Cordova Plugin Registry](http://plugins.cordova.io/#/package/com.ohh2ahh.plugins.appavailability) (deprecated [in favor of npm](http://cordova.apache.org/announcements/2015/04/21/plugins-release-and-move-to-npm.html))
+* [PhoneGap Plugin Registry](https://build.phonegap.com/plugins/1054) (deprecated because updating a plugin on PhoneGap Build requires a paid plan now)
 
 ### Automatically (Command-line Interface)
 
-Simply run this command to add the latest version of AppAvailability to your project:
+Simply run this command to add the latest version of AppAvailability from [npm](https://www.npmjs.com/package/cordova-plugin-appavailability) to your project:
 ```
-$ cordova plugin add https://github.com/ohh2ahh/AppAvailability.git
+$ cordova plugin add cordova-plugin-appavailability
 ```
 
 Don't forget to prepare and compile your project:
@@ -50,20 +51,22 @@ $ cordova build
 
 You don't have to reference the JavaScript in your `index.html`.
 
-Alternatively you can install AppAvailability directly from [npm](https://www.npmjs.com/package/cordova-plugin-appavailability) with this command:
+Alternatively you can install AppAvailability from [GitHub](https://github.com/ohh2ahh/AppAvailability):
 ```
-$ cordova plugin add cordova-plugin-appavailability
+$ cordova plugin add https://github.com/ohh2ahh/AppAvailability.git
 ```
 
 ### PhoneGap Build
 
-AppAvailability works with PhoneGap build too. You can implement the latest version of the plugin by adding the following xml to your `config.xml`:
+AppAvailability works with PhoneGap build too. **Unfortunately PhoneGap Build requires now a paid plan to update a plugin. Therefore the version on PhoneGap Build is deprecated.**
+
+You can implement version `0.3.1` of the plugin by adding the following xml to your `config.xml`:
 ```xml
 <gap:plugin name="com.ohh2ahh.plugins.appavailability" />
 ```
-Or if you want to use an exact version of AppAvailability:
+Or if you want to use the exact version of AppAvailability:
 ```xml
-<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.4.0" />
+<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
 ```
 
 There is no need to reference the JavaScript in your `index.html`.
