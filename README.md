@@ -1,6 +1,6 @@
 # AppAvailability for iOS and Android
 
-`Version 0.4.1`
+`Version 0.4.2`
 
 A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com).
 
