@@ -124,7 +124,7 @@ appAvailability.check(
 ```javascript
 var scheme;
 
-// Don't forget to add the org.apache.cordova.device plugin!
+// Don't forget to add the cordova-plugin-device plugin for `device.platform`
 if(device.platform === 'iOS') {
     scheme = 'twitter://';
 }
