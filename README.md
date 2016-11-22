@@ -73,9 +73,7 @@ $ cordova plugin add https://github.com/ohh2ahh/AppAvailability.git --save
 
 ### PhoneGap Build
 
-AppAvailability works with PhoneGap build too. **Unfortunately PhoneGap Build requires now a paid plan to update a plugin. Therefore the version on PhoneGap Build is deprecated.**
-
-You can include this plugin from either npm or directly from this repository:
+AppAvailability works with PhoneGap build too. You can include this plugin from either npm or directly from this repository:
 ```xml
 <plugin name="cordova-plugin-appavailability" source="npm" />
 ```
