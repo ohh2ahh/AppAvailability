@@ -1,6 +1,6 @@
 # AppAvailability for iOS and Android
 
-`Version 0.4.2`
+[![GitHub version](https://badge.fury.io/gh/ohh2ahh%2FAppAvailability.svg)](https://badge.fury.io/gh/ohh2ahh%2FAppAvailability) [![npm version](https://badge.fury.io/js/cordova-plugin-appavailability.svg)](https://badge.fury.io/js/cordova-plugin-appavailability)
 
 A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com).
 
@@ -16,7 +16,7 @@ A Plugin for Apache Cordova and Adobe PhoneGap by [ohh2ahh](http://ohh2ahh.com).
 4. [Some URI Schemes / Package Names](https://github.com/ohh2ahh/AppAvailability#4-some-uri-schemes--package-names)
 5. [License](https://github.com/ohh2ahh/AppAvailability#5-license)
 
-## Important: iOS 9 and iOS 10 (beta) URL Scheme Whitelist
+## Important: iOS 9 and iOS 10 URL Scheme Whitelist
 Apple changed the `canOpenURL` method on iOS 9. Apps which are checking for URL Schemes have to declare these Schemes as it is submitted to Apple. The article [Quick Take on iOS 9 URL Scheme Changes](http://awkwardhare.com/post/121196006730/quick-take-on-ios-9-url-scheme-changes) expains the changes in detail.
 
 ### Add URL Schemes to the Whitelist
@@ -48,18 +48,19 @@ It requires an URI Scheme (e.g. twitter://) on iOS or a Package Name (e.g com.tw
 The Cordova CLI is the recommended way to install AppAvailability, see [The Command-line Interface](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface). You can find the plugin on these registries:
 * [GitHub](https://github.com/ohh2ahh/AppAvailability)
 * [npm](https://www.npmjs.com/package/cordova-plugin-appavailability)
-* [Cordova Plugin Registry](http://plugins.cordova.io/#/package/com.ohh2ahh.plugins.appavailability) (deprecated [in favor of npm](http://cordova.apache.org/announcements/2015/04/21/plugins-release-and-move-to-npm.html))
-* [PhoneGap Plugin Registry](https://build.phonegap.com/plugins/1054) (deprecated because updating a plugin on PhoneGap Build requires a paid plan now)
+* ~~[Cordova Plugin Registry](http://plugins.cordova.io/#/package/com.ohh2ahh.plugins.appavailability)~~ (deprecated [in favor of npm](http://cordova.apache.org/announcements/2015/04/21/plugins-release-and-move-to-npm.html))
+* ~~[PhoneGap Plugin Registry](https://build.phonegap.com/plugins/1054)~~ (deprecated)
 
 ### Automatically (Command-line Interface)
 
 Simply run this command to add the latest version of AppAvailability from [npm](https://www.npmjs.com/package/cordova-plugin-appavailability) to your project:
 ```
-$ cordova plugin add cordova-plugin-appavailability
+$ cordova plugin add cordova-plugin-appavailability --save
 ```
 
 Don't forget to prepare and compile your project:
 ```
+$ cordova prepare
 $ cordova build
 ```
 
@@ -67,25 +68,22 @@ You don't have to reference the JavaScript in your `index.html`.
 
 Alternatively you can install AppAvailability from [GitHub](https://github.com/ohh2ahh/AppAvailability):
 ```
-$ cordova plugin add https://github.com/ohh2ahh/AppAvailability.git
+$ cordova plugin add https://github.com/ohh2ahh/AppAvailability.git --save
 ```
 
 ### PhoneGap Build
 
 AppAvailability works with PhoneGap build too. **Unfortunately PhoneGap Build requires now a paid plan to update a plugin. Therefore the version on PhoneGap Build is deprecated.**
 
-You can implement version `0.3.1` of the plugin by adding the following xml to your `config.xml`:
+You can include this plugin from either npm or directly from this repository:
 ```xml
-<gap:plugin name="com.ohh2ahh.plugins.appavailability" />
+<plugin name="cordova-plugin-appavailability" source="npm" />
 ```
-Or if you want to use the exact version of AppAvailability:
 ```xml
-<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
+<plugin spec="https://github.com/ohh2ahh/AppAvailability.git" source="git" />
 ```
 
 There is no need to reference the JavaScript in your `index.html`.
-
-You can find a PhoneGap Build project which demonstrates AppAvailability in the repository [ohh2ahh/AppAvailability-Demo-PhoneGap-Build](https://github.com/ohh2ahh/AppAvailability-Demo-PhoneGap-Build).
 
 ## 3. Usage
 
