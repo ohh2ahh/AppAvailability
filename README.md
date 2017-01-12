@@ -36,7 +36,7 @@ This plugin allows you to check if an app is installed on the user's device.
 It requires an URI Scheme (e.g. twitter://) on iOS or a Package Name (e.g com.twitter.android) on Android.
 
 * Ready for the Command-line Interface of Cordova / PhoneGap 3.0 and later
-* Works with PhoneGap Build ([more information](https://build.phonegap.com/plugins/17))
+* Works with PhoneGap Build
 
 ### Supported Platforms
 
