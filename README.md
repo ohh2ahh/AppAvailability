@@ -155,11 +155,11 @@ appAvailability.checkBool('twitter://', function(availability) {
 [How do I get the URI Scheme / Package Name?](https://github.com/ohh2ahh/AppAvailability/issues/2#issuecomment-22203591)
 
 Twitter:
-* iOS: `twitter://` ([more Schemes](http://wiki.akosma.com/IPhone_URL_Schemes#Twitter))
+* iOS: `twitter://`
 * Android: `com.twitter.android`
 
 Facebook:
-* iOS: `fb://` (and [many more](http://wiki.akosma.com/IPhone_URL_Schemes#Facebook) as `fb://profile`)
+* iOS: `fb://`
 * Android: `com.facebook.katana`
 
 WhatsApp:
