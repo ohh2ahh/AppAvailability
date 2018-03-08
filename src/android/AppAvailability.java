@@ -4,9 +4,11 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageInfo;
 
 public class AppAvailability extends CordovaPlugin {
     @Override
@@ -20,26 +22,40 @@ public class AppAvailability extends CordovaPlugin {
     }
     
     // Thanks to http://floresosvaldo.com/android-cordova-plugin-checking-if-an-app-exists
-    public boolean appInstalled(String uri) {
+    public PackageInfo getAppPackageInfo(String uri) {
         Context ctx = this.cordova.getActivity().getApplicationContext();
         final PackageManager pm = ctx.getPackageManager();
-        boolean app_installed = false;
+
         try {
-            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
-            app_installed = true;
+            return pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
         }
         catch(PackageManager.NameNotFoundException e) {
-            app_installed = false;
+            return null;
         }
-        return app_installed;
     }
     
     private void checkAvailability(String uri, CallbackContext callbackContext) {
-        if(appInstalled(uri)) {
-            callbackContext.success();
+
+        PackageInfo info = getAppPackageInfo(uri);
+
+        if(info != null) {
+            try {
+                callbackContext.success(this.convertPackageInfoToJson(info));
+            } 
+            catch(JSONException e) {
+                callbackContext.error("");    
+            }
         }
         else {
             callbackContext.error("");
         }
+    }
+
+    private JSONObject convertPackageInfoToJson(PackageInfo info) throws JSONException {
+        JSONObject json = new JSONObject();
+        json.put("version", info.versionName);
+        json.put("appId", info.packageName);
+
+        return json;
     }
 }
