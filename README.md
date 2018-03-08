@@ -106,8 +106,9 @@ appAvailability.check(
 ```javascript
 appAvailability.check(
     'com.twitter.android', // Package Name
-    function() {           // Success callback
-        console.log('Twitter is available');
+    function(info) {           // Success callback        
+        // Info parameter is available only for android
+        console.log('Twitter is available, and it\'s version is ', info.version);
     },
     function() {           // Error callback
         console.log('Twitter is not available');
