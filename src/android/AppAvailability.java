@@ -27,7 +27,9 @@ public class AppAvailability extends CordovaPlugin {
         final PackageManager pm = ctx.getPackageManager();
 
         try {
-            return pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
+            // Fixed 'package manager has died' error for some phones
+            // See https://stackoverflow.com/questions/24253976/android-package-manager-has-died-with-transactiontoolargeexception/24265790#24265790
+            return pm.getPackageInfo(uri, PackageManager.GET_META_DATA);
         }
         catch(PackageManager.NameNotFoundException e) {
             return null;
