@@ -43,7 +43,9 @@
                 <param name="android-package" value="com.ohh2ahh.appavailability.AppAvailability" />
             </feature>
         </config-file>
-        
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+        </config-file>
         <source-file src="src/android/AppAvailability.java" target-dir="src/com/ohh2ahh/appavailability/" />
     </platform>
     
